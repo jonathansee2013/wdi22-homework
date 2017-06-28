@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery AJAX Wonderland</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/location.js"></script>
+  <style>
+   #map {
+     width: 100%;
+     height: 400px;
+     background-color: grey;
+   }
+  </style>
+</head>
+<body>
+  <!-- <div id="number">The number of people in space is </div>
+
+  <div id="people">The names of people in space are: </div>
+
+  <button id="spacePeople">Press</button> -->
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var isslocation = {lat: undefined, lng: undefined};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: isslocation
+        });
+        var marker = new google.maps.Marker({
+          position: isslocation,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7OLPLcEOMfdHqQUKmCRG_BEnWGTc6Igg&callback=initMap">
+    </script>
+
+  <div id="coordinates"></div>
+
+  <!-- <button id="location">Press</button> -->
+
+  <!-- </div> -->
+</body>
+</html>
